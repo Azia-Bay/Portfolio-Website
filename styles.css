@@ -1,0 +1,340 @@
+* {
+  font-family: verdana;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.main-navigation {
+  background: linear-gradient(black, transparent);
+  margin-bottom: -100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: sticky;
+  top: 0px;
+  height: 100px;
+  z-index: 2;
+}
+
+.main-navigation ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-navigation li {
+  display: inline-block;
+  font-family: helvetica;
+  margin-top: 25px;
+  text-transform: uppercase;
+  transition-duration: 0.25s;
+}
+
+.main-navigation li:first-child {
+  align-self: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 15px 15px 15px 15px;
+  text-transform: none;
+}
+
+.main-navigation a {
+  color: white;
+  display: block;
+  padding: 15px 15px 15px 15px;
+}
+
+.main-navigation li:first-child a {
+  color: deepskyblue;
+  padding: 0px;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/snowy-mountain-peak.jpg");
+  background-position: left bottom;
+  background-size: cover;
+  filter: drop-shadow(0px 10px 10px gray);
+  width: 100%; height: 100vh;
+}
+
+.banner .headshot, .banner .title {
+  filter: drop-shadow(-10px 10px 10px black);
+  margin-top: 275px;
+  position: absolute;
+}
+
+.banner .headshot {
+  background: lightgray;
+  border-color: white;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 15px;
+  width: 250px; height: 250px;
+  margin-left: 50px;
+}
+
+.banner .title {
+  align-items: center;
+  display: flex;
+  height: 280px;
+  margin-left: 355px;
+}
+
+.banner .title h1 {
+  color: white;
+  font-size: 60px;
+}
+
+.banner .arrow {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  font-size: 80px;
+  justify-content: center;
+  left: calc(50vw);
+  position: absolute;
+  top: 525px;
+  transform: rotate(180deg);
+}
+
+.banner .arrow:hover {
+  color: white;
+}
+
+.to-top-arrow {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  left: calc(100% - 75px);
+  margin-bottom: -50px;
+  position: sticky;
+  top: calc(100% - 75px);
+  transition-duration: 0.25s;
+  width: 50px; height: 50px;
+  z-index: 2;
+}
+
+.to-top-arrow:hover {
+  background: rgb(0, 0, 0, 0.7);
+}
+
+#about, #skills, #projects {
+  padding: 200px 50px 200px 50px;
+}
+
+#about {
+  background: ghostwhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about h2 {
+  font-size: 60px;
+  text-align: center;
+}
+
+#about .divider {
+  align-self: center;
+  background: deepskyblue;
+  width: 200px; height: 10px;
+  margin: 15px 0px 25px 0px;
+}
+
+#about para {
+  font-size: 24px;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+#about .socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#about .socials li {
+  display: inline-block;
+  font-size: 48px;
+  margin-right: 20px;
+}
+
+#about .socials li:last-of-type {
+  margin-right: 0px;
+}
+
+#about .socials a {
+  color: black;
+}
+
+#about .socials a:hover {
+  color: deepskyblue;
+}
+
+#skills {
+  background: rgb(25, 25, 25);
+  text-align: center;
+}
+
+#skills .title {
+  color: deepskyblue;
+  font-size: 18px;
+}
+
+#skills h2 {
+  color: ghostwhite;
+  margin-bottom: 5px;
+}
+
+#skills h2, #skills h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+#skills .stacks {
+  color: ghostwhite;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+#skills .programming-languages, #skills .tools {
+  display: flex;
+  flex-direction: column;
+}
+
+#skills .divider {
+  align-self: center;
+  background: deepskyblue;
+  width: 50px; height: 5px;
+  margin: 15px 0px 50px 0px;
+}
+
+#skills .row {
+  margin-bottom: 20px;
+}
+
+#skills .row:last-of-type {
+  margin-bottom: 0px;
+}
+
+#skills .language, #skills .tool {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+#skills .language:first-of-type, #skills .tool:first-of-type {
+  margin-right: 30px;
+}
+
+#skills .language i, #skills .tool i, #skills .language svg, #skills .tool svg {
+  font-size: 80px;
+  margin-bottom: 5px;
+}
+
+#skills .language svg, #skills .tool svg {
+  align-self: center;
+  height: 1em;
+  margin-bottom: 10.33px;
+}
+
+#projects {
+  align-items: center;
+  background: ghostwhite;
+  color: rgb(25, 25, 25);
+  display: flex;
+  flex-direction: column;
+}
+
+#projects h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+#projects .divider {
+  background: deepskyblue;
+  width: 125px; height: 10px;
+  margin: 15px 0px 50px 0px;
+}
+
+#projects .project {
+  display: flex;
+  height: 300px;
+}
+
+#projects .project .slide {
+  background: rgb(25, 25, 25);
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 500px; height: auto;
+}
+
+#projects .project .journal, #projects .project .stats {
+  display: none;
+}
+
+#projects .project .description {
+  margin-left: 50px;
+  text-align: justify;
+}
+
+#projects .project h3 {
+  background: rgb(25, 25, 25);
+  color: ghostwhite;
+  font-size: 26px;
+  padding: 5px;
+  text-align: center;
+}
+
+#projects .project .tagline {
+  padding: 15px 0px 15px 0px;
+}
+
+#projects .project em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+#projects .project .github {
+  font-size: 36px;
+  margin-top: 15px;
+}
+
+#projects .project .github a {
+  color: black;
+}
+
+#projects .project .github a:hover {
+  color: deepskyblue;
+}
+
+#contact {
+  background: rgb(25, 25, 25);
+  height: 100vh;
+}
+
+footer {
+  background: black;
+  color: white;
+  font-family: helvetica;
+  padding: 50px 50px 50px 50px;
+}
+
+footer .copyright {
+  float: left;
+}
+
+footer .socials {
+
+}
