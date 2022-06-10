@@ -138,19 +138,20 @@ a:link, a:visited {
 }
 
 #about h2 {
-  font-size: 60px;
+  font-size: max(5vw, 36px);
   text-align: center;
 }
 
 #about .divider {
   align-self: center;
   background: deepskyblue;
-  width: 200px; height: 10px;
+  font-size: max(5vw, 36px);
+  width: 3em; height: 10px;
   margin: 15px 0px 25px 0px;
 }
 
 #about para {
-  font-size: 24px;
+  font-size: max(1.875vw, 14px);
   text-align: justify;
   text-indent: 2em;
 }
@@ -177,29 +178,6 @@ a:link, a:visited {
 
 #about .socials a:hover {
   color: deepskyblue;
-}
-
-@media screen and (max-width: 600px) {
-  .main-navigation {
-    padding: 0px 25px 0px 25px;
-  }
-
-  #about, #skills, #projects {
-    padding: 200px 25px 200px 25px;
-  }
-
-  #about h2 {
-    font-size: 36px;
-  }
-
-  #about .divider {
-    width: 110px; height: 7px;
-    margin: 10px 0px 15px 0px;
-  }
-
-  #about para {
-    font-size: 16px;
-  }
 }
 
 #skills {
