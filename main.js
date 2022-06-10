@@ -73,10 +73,46 @@ document.addEventListener("scroll", function() {
   };
 });
 
-/*var languages = document.querySelectorAll(".language");
-languages.forEach((language, index) => {
-  var name = language.innerHTML;
-  var index = name.lastIndexOf('>');
-  name = name.substring(index + 1);
-  console.log(name, language.getBoundingClientRect().top);
-});*/
+/* Highlights slideshow navigation dots upon hover or selection */
+var unselected = "rgba(0, 0, 0, 0.5)";
+var selected = "rgba(0, 0, 0, 0.7)";
+
+function dotOnMouseEnter() {
+  if(this.style.background == selected) return;
+  this.style.background = selected;
+  this.addEventListener("click", dotOnClick);
+  this.addEventListener("mouseleave", dotOnMouseLeave);
+}
+
+function dotOnMouseLeave() {
+  this.style.background = unselected;
+  this.removeEventListener("click", dotOnClick);
+  this.removeEventListener("mouseleave", dotOnMouseLeave);
+}
+
+/* Displays image corresponding to navigation dot upon click */
+function dotOnClick() {
+  var nav = this.parentNode;
+  nav.querySelectorAll('li').forEach((dot, index) => {
+    dot.style.background = unselected;
+  });
+  nav.parentNode.querySelectorAll('img').forEach((img, index) => {
+    img.style.display = "none";
+    if(img.className == this.className) img.style.display = "inherit";
+  });
+  this.style.background = selected;
+  this.removeEventListener("click", dotOnClick);
+  this.removeEventListener("mouseleave", dotOnMouseLeave);
+}
+
+/* Displays the first slide in each slideshow by default */
+document.querySelectorAll('.slideshow').forEach((slideshow, index) => {
+  slideshow.querySelectorAll('img').forEach((img, index) => {
+    if(index == 0) return;
+    img.style.display = "none";
+  });
+  slideshow.querySelectorAll('li').forEach((dot, index) => {
+    if(index == 0) dot.style.background = selected;
+    dot.addEventListener("mouseenter", dotOnMouseEnter);
+  });
+});

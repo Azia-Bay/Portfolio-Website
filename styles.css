@@ -272,16 +272,34 @@ a:link, a:visited {
   height: 300px;
 }
 
+#projects .project .slideshow {
+
+}
+
 #projects .project .slide {
   background: rgb(25, 25, 25);
   display: flex;
   flex-shrink: 0;
   justify-content: center;
-  width: 500px; height: auto;
+  width: 500px; height: 100%;
 }
 
-#projects .project .journal, #projects .project .stats {
-  display: none;
+#projects .project nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#projects .project li {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px 12px 0px 0px;
+  width: 12px; height: 12px;
+}
+
+#projects .project li:last-of-type {
+  margin-right: 0px;
 }
 
 #projects .project .description {
