@@ -1,3 +1,5 @@
+/* All */
+
 * {
   font-family: verdana;
   margin: 0px;
@@ -8,6 +10,8 @@
 a:link, a:visited {
   text-decoration: none;
 }
+
+/* Main Navigation */
 
 .main-navigation {
   background: linear-gradient(black, transparent);
@@ -52,6 +56,8 @@ a:link, a:visited {
   color: deepskyblue;
   padding: 0px;
 }
+
+/* Banner */
 
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/snowy-mountain-peak.jpg");
@@ -130,6 +136,8 @@ a:link, a:visited {
   padding: 200px 50px 200px 50px;
 }
 
+/* About */
+
 #about {
   background: ghostwhite;
   display: flex;
@@ -179,6 +187,8 @@ a:link, a:visited {
 #about .socials a:hover {
   color: deepskyblue;
 }
+
+/* Skills */
 
 #skills {
   background: rgb(25, 25, 25);
@@ -266,6 +276,8 @@ a:link, a:visited {
   margin-bottom: 10.33px;
 }
 
+/* Projects */
+
 #projects {
   align-items: center;
   background: ghostwhite;
@@ -287,7 +299,6 @@ a:link, a:visited {
 
 #projects .project {
   display: flex;
-  height: 300px;
 }
 
 #projects .project .slide {
@@ -295,7 +306,7 @@ a:link, a:visited {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
-  width: 500px; height: 100%;
+  width: 500px; height: 300px;
 }
 
 #projects .project nav {
@@ -321,11 +332,34 @@ a:link, a:visited {
   text-align: justify;
 }
 
+@media screen and (max-width: 1028px) {
+  #projects {
+    padding: 200px 30px 200px 30px;
+  }
+
+  #projects .project {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  #projects .project .slide, #projects .project .description {
+    width: min(800px, calc(100vw - 60px));
+  }
+
+  #projects .project .slide {
+    height: min(480px, calc((100vw - 60px) * 3/5));
+  }
+
+  #projects .project .description {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
 #projects .project h3 {
   background: rgb(25, 25, 25);
   color: ghostwhite;
   font-size: 26px;
-  padding: 5px;
+  padding: 5px 30px 5px 30px;
   text-align: center;
 }
 
@@ -351,10 +385,14 @@ a:link, a:visited {
   color: deepskyblue;
 }
 
+/* Contact */
+
 #contact {
   background: rgb(25, 25, 25);
   height: 100vh;
 }
+
+/* Footer */
 
 footer {
   background: black;
