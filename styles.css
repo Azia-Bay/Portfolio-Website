@@ -16,7 +16,8 @@ a:link, a:visited {
 .main-navigation {
   background: linear-gradient(black, transparent);
   margin-bottom: -100px;
-  padding: 0px 50px 0px 50px;
+  padding-left: max(30px, 3.90625vw);
+  padding-right: max(30px, 3.90625vw);
   position: sticky;
   top: 0px;
   height: 100px;
@@ -63,14 +64,21 @@ a:link, a:visited {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/snowy-mountain-peak.jpg");
   background-position: left bottom;
   background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   filter: drop-shadow(0px 10px 10px gray);
-  width: 100%; height: 100vh;
+  min-height: 100vh; padding-bottom: 10px;
+  padding-top: max(150px, 42.438271604vh);
+  width: 100%;
+}
+
+.banner .self {
+  display: flex;
 }
 
 .banner .headshot, .banner .title {
   filter: drop-shadow(-10px 10px 10px black);
-  margin-top: 275px;
-  position: absolute;
 }
 
 .banner .headshot {
@@ -79,32 +87,56 @@ a:link, a:visited {
   border-radius: 50%;
   border-style: solid;
   border-width: 15px;
+  margin-left: max(30px, 3.90625vw);
   width: 250px; height: 250px;
-  margin-left: 50px;
 }
 
 .banner .title {
   align-items: center;
   display: flex;
   height: 280px;
-  margin-left: 355px;
+  margin-left: 25px;
+  margin-right: max(30px, 3.90625vw);
 }
 
-.banner .title h1 {
+.banner h1 {
   color: white;
   font-size: 60px;
 }
 
 .banner .arrow {
-  align-items: center;
+  align-self: center;
   color: rgba(255, 255, 255, 0.5);
-  display: flex;
   font-size: 80px;
-  justify-content: center;
-  left: calc(50vw);
-  position: absolute;
-  top: 525px;
+  margin-top: -30px;
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1026px) {
+  .banner {
+    padding-top: max(150px, 42.438271604vh);
+    padding-top: max(150px, 35vh);
+  }
+
+  .banner .self {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner .headshot, .banner .title {
+    margin-left: max(30px, 3.90625vw);
+    margin-right: max(30px, 3.90625vw);
+  }
+
+  .banner .title {
+    height: auto;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .banner h1 {
+    font-size: min(60px, 7.5vw);
+    text-align: center;
+  }
 }
 
 .banner .arrow:hover {
@@ -133,19 +165,9 @@ a:link, a:visited {
 }
 
 #about, #skills, #projects {
-  padding: 200px 50px 200px 50px;
-}
-
-@media screen and (max-width: 500px) {
-  .main-navigation {
-    padding-left: max(30px, 7.281553398vw);
-    padding-right: max(30px, 7.281553398vw);
-  }
-
-  #about, #skills, #projects {
-    padding-left: max(30px, 7.281553398vw);
-    padding-right: max(30px, 7.281553398vw);
-  }
+  padding: 200px 0px 200px 0px;
+  padding-left: max(30px, 3.90625vw);
+  padding-right: max(30px, 3.90625vw);
 }
 
 /* About */
@@ -351,11 +373,11 @@ a:link, a:visited {
   }
 
   #projects .project .slide, #projects .project .description {
-    width: min(800px, calc(100vw - max(60px, 14.563106796vw)));
+    width: min(800px, calc(100vw - max(60px, 7.8125vw)));
   }
 
   #projects .project .slide {
-    height: min(480px, calc((100vw - max(60px, 14.563106796vw)) * 3/5));
+    height: min(480px, calc((100vw - max(60px, 7.8125vw)) * 3/5));
   }
 
   #projects .project .description {
