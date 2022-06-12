@@ -136,6 +136,18 @@ a:link, a:visited {
   padding: 200px 50px 200px 50px;
 }
 
+@media screen and (max-width: 500px) {
+  .main-navigation {
+    padding-left: max(30px, 7.281553398vw);
+    padding-right: max(30px, 7.281553398vw);
+  }
+
+  #about, #skills, #projects {
+    padding-left: max(30px, 7.281553398vw);
+    padding-right: max(30px, 7.281553398vw);
+  }
+}
+
 /* About */
 
 #about {
@@ -159,7 +171,7 @@ a:link, a:visited {
 }
 
 #about para {
-  font-size: max(1.875vw, 14px);
+  font-size: max(1.875vw, 16px);
   text-align: justify;
   text-indent: 2em;
 }
@@ -333,21 +345,17 @@ a:link, a:visited {
 }
 
 @media screen and (max-width: 1028px) {
-  #projects {
-    padding: 200px 30px 200px 30px;
-  }
-
   #projects .project {
     align-items: center;
     flex-direction: column-reverse;
   }
 
   #projects .project .slide, #projects .project .description {
-    width: min(800px, calc(100vw - 60px));
+    width: min(800px, calc(100vw - max(60px, 14.563106796vw)));
   }
 
   #projects .project .slide {
-    height: min(480px, calc((100vw - 60px) * 3/5));
+    height: min(480px, calc((100vw - max(60px, 14.563106796vw)) * 3/5));
   }
 
   #projects .project .description {
