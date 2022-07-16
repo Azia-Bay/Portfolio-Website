@@ -27,6 +27,7 @@ a:link, a:visited {
 .main-navigation ul {
   display: flex;
   justify-content: flex-end;
+  height: 100%;
 }
 
 .main-navigation li {
@@ -42,7 +43,7 @@ a:link, a:visited {
   font-size: 24px;
   font-weight: bold;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 0px;
   padding: 15px 15px 15px 15px;
   text-transform: none;
 }
@@ -56,6 +57,45 @@ a:link, a:visited {
 .main-navigation li:first-child a {
   color: deepskyblue;
   padding: 0px;
+}
+
+.main-navigation .hamburger-menu {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  height: 22px;
+  position: absolute;
+  top: 35px; right: max(30px, 3.90625vw);
+}
+
+.main-navigation .line {
+  background: white;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 30px; height: 4px;
+}
+
+.main-navigation .line:first-of-type {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 700px) {
+  .main-navigation li {
+    display: none;
+    margin-top: 0px;
+  }
+
+  .main-navigation li:first-child {
+    display: flex;
+  }
+
+  .main-navigation li:first-child a {
+    align-self: center;
+  }
+
+  .main-navigation .hamburger-menu {
+    display: inline-block;
+  }
 }
 
 /* Banner */

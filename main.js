@@ -19,29 +19,11 @@ function navigationLinkOnMouseLeave() {
 var toTopArrow = document.querySelector(".to-top-arrow");
 
 // Updates navigation bar and to-top arrow corresponding to their positions relative to the banner
+var banner = document.querySelector(".banner");
+var navigationListItems = navigationBar.querySelectorAll("li");
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+var hamburgerLines = hamburgerMenu.querySelectorAll('.line');
 document.addEventListener("scroll", function() {
-  var banner = document.querySelector(".banner");
-  var navigationListItems = navigationBar.querySelectorAll("li");
-  if(banner.getBoundingClientRect().bottom <= 100) {
-    // Below banner
-    navigationBar.style.background = "black";
-    navigationBar.style.marginBottom = "-50px";
-    navigationBar.style.height = "50px";
-    navigationListItems.forEach((listItem, index) => {
-      if(index == 0) listItem.style.padding = "0px";
-      listItem.style.marginTop = "0px"
-    });
-  }
-  else {
-    // Above banner
-    navigationBar.style.background = "linear-gradient(black, transparent)";
-    navigationBar.style.marginBottom = "-100px";
-    navigationBar.style.height = "100px";
-    navigationListItems.forEach((listItem, index) => {
-      if(index == 0) listItem.style.padding = "15px 15px 15px 15px";
-      listItem.style.marginTop = "25px"
-    });
-  }
   if(banner.getBoundingClientRect().top <= -100) {
     // Below banner
     toTopArrow.style.opacity = "1";
@@ -51,6 +33,34 @@ document.addEventListener("scroll", function() {
     // Above banner
     toTopArrow.style.opacity = "0";
     toTopArrow.style.visibility = "hidden";
+  }
+  // If the hamburger menu is open, break out of the function
+  if(hamburgerLines[0].style.background == "deepskyblue") return;
+  if(banner.getBoundingClientRect().bottom <= 100) {
+    // Below banner
+    navigationBar.style.background = "black";
+    navigationBar.style.marginBottom = "-50px";
+    navigationBar.style.height = "50px";
+    navigationListItems.forEach((listItem, index) => {
+      if(index == 0) listItem.style.padding = "0px";
+      listItem.style.marginTop = "0px"
+    });
+    hamburgerMenu.style.top = "14px";
+  }
+  else {
+    // Above banner
+    navigationBar.style.background = "linear-gradient(black, transparent)";
+    navigationBar.style.marginBottom = "-100px";
+    navigationBar.style.height = "100px";
+    navigationListItems.forEach((listItem, index) => {
+      if(index == 0) {
+        listItem.style.padding = "15px 15px 15px 15px";
+        listItem.style.marginTop = "0px";
+        return;
+      }
+      listItem.style.marginTop = "25px"
+    });
+    hamburgerMenu.style.top = "35px";
   }
 });
 
@@ -73,7 +83,97 @@ document.addEventListener("scroll", function() {
   };
 });
 
-/* Highlights slideshow navigation dots upon hover or selection */
+function openMenu() {
+  navigationBar.style.background = "black";
+  navigationBar.style.height = "250px";
+  navigationBar.style.marginBottom = "-250px";
+  navigationList.style.flexDirection = "column";
+  navigationList.style.justifyContent = "flex-start";
+  navigationListItems.forEach((listItem, index) => {
+    if(index == 0) {
+      listItem.style.height = "50px";
+      listItem.style.padding = "0px";
+      return;
+    }
+    listItem.style.display = "inline-block";
+    listItem.style.marginTop = "0px"
+  });
+  hamburgerMenu.style.top = "14px";
+  hamburgerLines.forEach((line, index) => {
+    line.style.background = "deepskyblue";
+  });
+}
+
+function closeMenu() {
+  if(banner.getBoundingClientRect().bottom <= 100) {
+    // Below banner
+    navigationBar.style.background = "black";
+    navigationBar.style.height = "50px";
+    navigationBar.style.marginBottom = "-50px";
+  }
+  else {
+    //Above banner
+    navigationBar.style.background = "linear-gradient(black, transparent)";
+    navigationBar.style.height = "100px";
+    navigationBar.style.marginBottom = "-100px";
+    hamburgerMenu.style.top = "35px";
+  }
+  navigationList.style.flexDirection = "row";
+  navigationList.style.justifyContent = "flex-end";
+  navigationListItems.forEach((listItem, index) => {
+    if(index == 0) {
+      listItem.style.height = "auto";
+      listItem.style.padding = "15px 15px 15px 15px";
+      return;
+    }
+    listItem.style.display = "none";
+  });
+  hamburgerLines.forEach((line, index) => {
+    line.style.background = "white";
+  });
+}
+
+// Handles hamburger menu upon click
+var navigationList = navigationBar.querySelector('ul');
+hamburgerMenu.addEventListener("click", hamburgerMenuOnClick);
+
+function hamburgerMenuOnClick() {
+  if(hamburgerLines[0].style.background != "deepskyblue") openMenu();
+  else closeMenu();
+}
+
+// Handles hamburger menu upon screen resize
+window.addEventListener("resize", function(event) {
+  if(window.innerWidth > 700) {
+    closeMenu();
+    navigationListItems.forEach((listItem, index) => {
+      if(index == 0) return;
+      listItem.style.display = "inline-block";
+      if(banner.getBoundingClientRect().bottom <= 100) {
+        // Below banner
+        listItem.style.marginTop = "0px";
+      }
+      else {
+        // Above banner
+        listItem.style.marginTop = "25px";
+      }
+    });
+  }
+  else if(hamburgerLines[0].style.background != "deepskyblue") {
+    navigationListItems.forEach((listItem, index) => {
+      if(index == 0) return;
+      listItem.style.display = "none";
+    });
+  }
+});
+
+// Closes hamburger menu upon clicking outside of menu
+document.body.addEventListener("click", (event) => {
+  if(!navigationBar.contains(event.target) && hamburgerLines[0].style.background == "deepskyblue")
+    closeMenu();
+});
+
+// Highlights slideshow navigation dots upon hover or selection
 var unselected = "rgba(0, 0, 0, 0.5)";
 var selected = "rgba(0, 0, 0, 0.7)";
 
@@ -90,7 +190,7 @@ function dotOnMouseLeave() {
   this.removeEventListener("mouseleave", dotOnMouseLeave);
 }
 
-/* Displays image corresponding to navigation dot upon click */
+// Displays image corresponding to navigation dot upon click
 function dotOnClick() {
   var nav = this.parentNode;
   nav.querySelectorAll('li').forEach((dot, index) => {
@@ -105,7 +205,7 @@ function dotOnClick() {
   this.removeEventListener("mouseleave", dotOnMouseLeave);
 }
 
-/* Displays the first slide in each slideshow by default */
+// Displays the first slide in each slideshow by default
 document.querySelectorAll('.slideshow').forEach((slideshow, index) => {
   slideshow.querySelectorAll('img').forEach((img, index) => {
     if(index == 0) return;
