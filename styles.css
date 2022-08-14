@@ -204,7 +204,7 @@ a:link, a:visited {
   background: rgb(0, 0, 0, 0.7);
 }
 
-#about, #skills, #projects {
+#about, #skills, #projects, #contact {
   padding: 200px 0px 200px 0px;
   padding-left: max(30px, 3.90625vw);
   padding-right: max(30px, 3.90625vw);
@@ -458,8 +458,84 @@ a:link, a:visited {
 /* Contact */
 
 #contact {
+  align-items: center;
   background: rgb(25, 25, 25);
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact h2 {
+  color: ghostwhite;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#contact .mailto {
+  color: ghostwhite;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#contact .mailto a {
+  color: deepskyblue;
+}
+
+#contact .mailto a:hover {
+  text-decoration: underline;
+}
+
+#contact .divider {
+  background: deepskyblue;
+  width: 100px; height: 8px;
+  margin-bottom: 25px;
+}
+
+#contact .form-title {
+  color: ghostwhite;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+#contact form {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 16px;
+  min-width: 250px;
+  width: 40%;
+}
+
+#contact input:first-of-type {
+  margin-top: 0px;
+}
+
+#contact input, #contact textarea {
+  background-color: ghostwhite;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  outline: none;
+  padding: 20px 20px 20px 20px;
+}
+
+#contact input:last-of-type {
+  align-self: center;
+  background-color: deepskyblue;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  min-width: 150px;
+  width: 45%;
+}
+
+#contact input:last-of-type:hover {
+  background-color: rgba(0, 191, 255, 0.6);
+}
+
+#contact textarea {
+  padding-bottom: 100px;
+  resize: none;
 }
 
 /* Footer */
@@ -467,14 +543,51 @@ a:link, a:visited {
 footer {
   background: black;
   color: white;
-  font-family: helvetica;
-  padding: 50px 50px 50px 50px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  justify-content: space-between;
+  padding: 25px 0px 25px 0px;
+  padding-left: max(30px, 3.90625vw);
+  padding-right: max(30px, 3.90625vw);
 }
 
-footer .copyright {
-  float: left;
+footer div:first-of-type {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+footer div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  white-space: nowrap;
+  width: 100px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: deepskyblue;
+}
+
+footer .repo a:hover {
+  text-decoration: underline;
 }
 
 footer .socials {
+  font-size: 48px;
+}
 
+footer .socials a:first-of-type {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  footer div:last-of-type {
+    width: 25px;
+  }
 }
