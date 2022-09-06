@@ -1,5 +1,5 @@
 # Portfolio
-My personal portfolio website, http://aziabay.com/. Always updating.
+My personal portfolio website, [aziabay.com](http://aziabay.com/). Always updating.
 
 TECH STACK
 ----------------
