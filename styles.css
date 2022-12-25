@@ -13,10 +13,6 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
-  font-weight: 200;
-}
-
 .icon {
   aspect-ratio: 1;
   background-color: white;
@@ -63,6 +59,10 @@ main {
 }
 
 /* ABOUT */
+.about-header {
+  font-weight: 200;
+}
+
 .developer-icon {
   align-self: center;
   background-image: url("images/icon.jpg");
@@ -78,6 +78,28 @@ main {
 }
 
 /* PROJECTS */
+.project {
+  background-color: #1D1D1D;
+  border-color: #2272FF;
+  border-style: solid;
+  border-width: 1px;
+  padding: 15px;
+}
+
+.project-header {
+  color: #2272FF;
+  font-weight: bold;
+}
+
+.project-tools {
+  color: #2272FF;
+  font-weight: 200;
+}
+
+.project-summary {
+  color: #2272FF;
+}
+
 /* AWARDS */
 /* CONTACT */
 /* FOOTER */
