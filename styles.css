@@ -101,5 +101,14 @@ main {
 }
 
 /* AWARDS */
+.award-header {
+  color: #2272FF;
+  font-weight: bold;
+}
+
+.award-organization {
+  font-weight: 200;
+}
+
 /* CONTACT */
 /* FOOTER */
