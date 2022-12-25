@@ -7,6 +7,10 @@
   padding: 0px;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+}
+
 h1 {
   color: #2272FF;
   font-weight: bold;
@@ -68,14 +72,14 @@ main {
 
 .developer-icon {
   align-self: center;
-  background-image: url("images/icon.jpg");
+  background-image: url("resources/images/icon.jpg");
   background-size: 400px;
   width: 250px;
 }
 
 /* COMPANIES */
 .company-icon {
-  background-image: url("images/maxus33.png");
+  background-image: url("resources/images/maxus33.png");
   background-size: 75px;
   width: 100px;
 }
@@ -171,9 +175,13 @@ footer {
   width: 50%;
 }
 
-footer span {
+footer span, footer a {
   background-color: #2272FF;
   color: #1D1D1D;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer .medium-expanse {
