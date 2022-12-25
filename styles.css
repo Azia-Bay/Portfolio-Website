@@ -11,6 +11,10 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+.underline-on-hover:hover {
+  text-decoration: underline;
+}
+
 h1 {
   color: #2272FF;
   font-weight: bold;
@@ -76,6 +80,10 @@ main {
   background-image: url("resources/images/icon.jpg");
   background-size: 400px;
   width: 250px;
+}
+
+.about-link {
+  color: deepskyblue;
 }
 
 /* COMPANIES */
@@ -179,10 +187,6 @@ footer {
 footer span, footer a {
   background-color: #2272FF;
   color: #1D1D1D;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 footer .medium-expanse {
