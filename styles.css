@@ -2,7 +2,7 @@
   background-color: #1D1D1D;
   color: white;
   font-family: 'Inter';
-  font-size: 1em;
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
 }
@@ -28,8 +28,8 @@ h1 {
   border-style: none;
   color: #1D1D1D;
   font-weight: bold;
-  padding: 15px 0px 15px 0px;
-  width: 150px;
+  min-width: 250px;
+  padding: 15px;
 }
 
 .large-expanse {
@@ -44,6 +44,10 @@ h1 {
   height: 10px;
 }
 
+.contact-topics {
+  gap: 10px;
+}
+
 body {
   align-items: center;
   display: flex;
@@ -53,8 +57,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  margin: 100px 0px 50px 0px;
-  max-width: 1600px;
+  max-width: 700px;
   padding: 0px 24px 0px 24px;
 }
 
@@ -118,7 +121,6 @@ main {
 .contact-topics {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .contact-topic {
@@ -137,6 +139,7 @@ main {
   color: #1D1D1D;
   font-weight: bold;
   padding: 15px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -146,14 +149,14 @@ footer {
   background-color: #2272FF;
   display: flex;
   flex-direction: column;
-  padding: 15px 0px 15px 0px;
   width: 100%;
 }
 
 .container {
   background-color: #2272FF;
-  max-width: 1600px;
-  width: 100%;
+  max-width: 700px;
+  padding: 0px 24px 0px 24px;
+  width: calc(100% - 48px);
 }
 
 .columns {
@@ -168,14 +171,6 @@ footer {
   width: 50%;
 }
 
-.column:first-of-type {
-  margin-left: 24px;
-}
-
-.columns:last-of-type {
-  margin-right: 24px;
-}
-
 footer span {
   background-color: #2272FF;
   color: #1D1D1D;
@@ -183,8 +178,4 @@ footer span {
 
 footer .medium-expanse {
   background-color: #2272FF;
-}
-
-.copyright {
-  margin: 0px 24px 0px 24px;
 }
