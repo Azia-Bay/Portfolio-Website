@@ -1,0 +1,72 @@
+* {
+  background-color: #1D1D1D;
+  color: white;
+  font-family: 'Inter';
+  font-size: 1em;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  color: #2272FF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+.navigation-button {
+  align-self: center;
+  background-color: #2272FF;
+  border-radius: 10px;
+  border-style: none;
+  color: #1D1D1D;
+  font-weight: bold;
+  padding: 15px 0px 15px 0px;
+  width: 150px;
+}
+
+.large-expanse {
+  height: 50px;
+}
+
+.medium-expanse {
+  height: 30px;
+}
+
+.small-expanse {
+  height: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0px 50px 0px;
+  padding: 0px 24px 0px 24px;
+  max-width: 1600px;
+  width: 100%;
+}
+
+/* ABOUT */
+.icon {
+  align-self: center;
+  aspect-ratio: 1;
+  background-image: url("images/icon.jpg");
+  background-position: center;
+  background-size: 400px;
+  border-radius: 50%;
+  width: 250px;
+}
+
+/* COMPANIES */
+/* PROJECTS */
+/* AWARDS */
+/* CONTACT */
+/* FOOTER */
