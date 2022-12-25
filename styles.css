@@ -111,4 +111,33 @@ main {
 }
 
 /* CONTACT */
+.contact-header {
+  font-weight: 200;
+}
+
+.contact-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-topic {
+  background-color: #1D1D1D;
+  border-color: #2272FF;
+  border-style: solid;
+  border-width: 1px;
+  color: #2272FF;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.contact-button {
+  background-color: #2272FF;
+  border-style: none;
+  color: #1D1D1D;
+  font-weight: bold;
+  padding: 15px;
+  width: fit-content;
+}
+
 /* FOOTER */
