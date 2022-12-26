@@ -1,5 +1,4 @@
 * {
-  background-color: #1D1D1D;
   color: white;
   font-family: 'Inter';
   font-size: 16px;
@@ -59,6 +58,7 @@ h1 {
 
 body {
   align-items: center;
+  background-color: #1D1D1D;
   display: flex;
   flex-direction: column;
 }
@@ -68,6 +68,47 @@ main {
   flex-direction: column;
   max-width: 700px;
   padding: 0px 24px 0px 24px;
+}
+
+/* NAVIGATION BAR */
+nav {
+  align-items: center;
+  background-color: #2272FF;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0px 15px 0px;
+  position: fixed;
+  width: 100%;
+}
+
+.name {
+  color: #1D1D1D;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  color: #1D1D1D;
+  cursor: pointer;
+  float: right;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.menu-item {
+  border-color: #1D1D1D;
+  border-top-style: solid;
+  border-width: 1.5px;
+  padding: 5px 0px 5px 0px;
+  text-align: right;
+}
+
+.menu-item a {
+  color: #1D1D1D;
 }
 
 /* ABOUT */
@@ -166,29 +207,21 @@ footer {
 }
 
 .container {
-  background-color: #2272FF;
   max-width: 700px;
   padding: 0px 24px 0px 24px;
   width: calc(100% - 48px);
 }
 
 .columns {
-  background-color: #2272FF;
   display: flex;
 }
 
 .column {
-  background-color: #2272FF;
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
 footer span, footer a {
-  background-color: #2272FF;
   color: #1D1D1D;
-}
-
-footer .medium-expanse {
-  background-color: #2272FF;
 }
