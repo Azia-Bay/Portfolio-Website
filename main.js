@@ -1,7 +1,7 @@
 // On menu icon tapped
 document.querySelector(".menu-icon").addEventListener("click", () => {
   var menu = document.querySelector(".menu");
-  menu.style.display = menu.style.display == "none" ? "flex" : "none";
+  menu.style.display = menu.style.display == "flex" ? "none" : "flex";
 });
 
 // On outside navigation bar tapped
