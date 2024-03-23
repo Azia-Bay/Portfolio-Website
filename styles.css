@@ -1,10 +1,17 @@
 /* GENERAL */
 * {
-  color: white;
+  color: whitesmoke;
   font-family: 'Prosto One', serif;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0px;
   padding: 0px;
+}
+
+p, a {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +33,11 @@
     deepskyblue;
 }
 
+a {
+  color: deepskyblue;
+  font-weight: 400;
+}
+
 a:link, a:visited {
   text-decoration: none;
 }
@@ -34,15 +46,31 @@ a:link, a:visited {
   text-decoration: underline;
 }
 
-.h1-box {
+.box, .header-box, .header-1-box {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.header-box, .header-1-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80vw;
+  height: 10vh;
+  margin-bottom: 50px;
+}
+
+.header-1-box {
+  margin: 0px;
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background-color: black;
-  width: 80vw;
-  height: 15%;
-  border-radius: 10px;
+  height: 15vh;
   align-self: center;
+}
+
+h1, h2, p {
+  z-index: 1;
 }
 
 h1 {
@@ -54,6 +82,16 @@ h1 {
   font-size: max(18px, 3vw);
 }
 
+h2 {
+  width: 100%;
+  text-align: center;
+  font-size: max(18px, 2vw);
+}
+
+p, a {
+  line-height: 135%;
+}
+
 /* FRAME */
 .frame {
   border: solid black;
@@ -61,7 +99,8 @@ h1 {
   position: fixed;
   width: calc(100% - 49px);
   height: calc(100% - 50px);
-  z-index: 1;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* BANNER */
@@ -85,9 +124,68 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50vh;
 }
 
-.main-container {
-  padding: 0px 24px 0px 24px;
-  height: 5000px;
+/* ABOUT */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100vh;
+  width: 80vw;
+}
+
+.about-section .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-section .row .box {
+  width: 100%;
+  height: auto;
+}
+
+.about-section .row .box:first-of-type {
+  margin-right: 50px;
+  width: auto;
+  height: 550px;
+}
+
+.about-section img {
+  border-radius: 10px;
+  margin: 25px;
+  height: 500px;
+}
+
+.about-section p {
+  margin: 25px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* GENERAL */
+  * {
+    font-size: 14px;
+  }
+
+  .header-box {
+    margin-bottom: 25px;
+  }
+
+  /* ABOUT */
+  .about-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section .row .box:first-of-type {
+    margin-right: 0px;
+    margin-bottom: 25px;
+    max-width: 331px;
+    height: auto;
+  }
+
+  .about-section img {
+    width: min(calc(100% - 50px), 281px);
+    height: auto;
+  }
 }
