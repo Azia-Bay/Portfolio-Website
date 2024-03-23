@@ -46,7 +46,7 @@ a:link, a:visited {
   text-decoration: underline;
 }
 
-.box, .header-box, .header-1-box {
+.box, .header-box, .header-1-box, .portrait-box, .resume-box {
   background-color: black;
   border-radius: 10px;
 }
@@ -135,18 +135,21 @@ main {
   width: 80vw;
 }
 
-.about-section .row {
+.about-section .profile {
+  margin-right: 50px;
+}
+
+.about-section .content, .socials {
   display: flex;
   flex-direction: row;
 }
 
-.about-section .row .box {
+.about-section .content .box {
   width: 100%;
   height: auto;
 }
 
-.about-section .row .box:first-of-type {
-  margin-right: 50px;
+.portrait-box {
   width: auto;
   height: 550px;
 }
@@ -155,6 +158,37 @@ main {
   border-radius: 10px;
   margin: 25px;
   height: 500px;
+}
+
+.socials {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.socials .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  aspect-ratio: 1;
+}
+
+.socials .box:last-of-type {
+  margin: 0px;
+}
+
+.socials .box i {
+  font-size: 200%;
+}
+
+.resume-box {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  font-family: 'Prosto One', serif;
 }
 
 .about-section p {
@@ -172,14 +206,18 @@ main {
   }
 
   /* ABOUT */
-  .about-section .row {
+  .about-section .profile {
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+
+  .about-section .content {
     flex-direction: column;
     align-items: center;
   }
 
-  .about-section .row .box:first-of-type {
+  .portrait-box {
     margin-right: 0px;
-    margin-bottom: 25px;
     max-width: 331px;
     height: auto;
   }
