@@ -100,10 +100,10 @@ p {
   margin: 25px;
 }
 
-.about-section, footer {
+.about-section, .companies-section, footer {
   display: flex;
   flex-direction: column;
-  margin-top: 100vh;
+  margin-top: 50vh;
   width: 80vw;
 }
 
@@ -143,6 +143,10 @@ main, body {
 }
 
 /* ABOUT */
+.about-section {
+  margin-top: 100vh;
+}
+
 .about-section .profile {
   margin-right: 50px;
 }
@@ -197,6 +201,36 @@ main, body {
   line-height: 50px;
   text-align: center;
   font-family: 'Prosto One', serif;
+}
+
+/* COMPANIES */
+.companies-section .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.companies-section .content .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-background {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  margin: 25px;
+}
+
+.companies-section img {
+  margin: 15px;
+  width: auto;
+  height: 75px;
 }
 
 /* FOOTER */
@@ -262,6 +296,11 @@ footer p:first-of-type {
   .about-section img {
     width: min(calc(100% - 50px), 281px);
     height: auto;
+  }
+
+  /* COMPANIES */
+  .companies-section img {
+    height: 50px;
   }
 
   /* FOOTER */
