@@ -100,7 +100,7 @@ p {
   margin: 25px;
 }
 
-.about-section, .companies-section, .recommendations-section, .projects-section, footer {
+.about-section, .companies-section, .recommendations-section, .awards-section, .projects-section, footer {
   display: flex;
   flex-direction: column;
   margin-top: 50vh;
@@ -237,15 +237,21 @@ main, body {
   height: 75px;
 }
 
-/* RECOMMENDATIONS */
-.recommendation {
+/* RECOMMENDATIONS AND AWARDS */
+.recommendations-section .content, .awards-section .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.recommendation, .award {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 15px;
 }
 
-.recommendation .fa-solid {
+.recommendation .fa-solid, .award .fa-solid {
   color: gold;
   min-width: 100px;
   max-width: 100px;
@@ -256,8 +262,35 @@ main, body {
   font-size: 200%;
 }
 
-.recommendation p:last-of-type {
+.recommendation p:last-of-type, .recommendation p:last-of-type a {
   font-style: italic;
+}
+
+.award .box:first-of-type {
+  width: 100%;
+}
+
+.award .title {
+  margin: 25px;
+  margin-bottom: 0px;
+}
+
+.award .title a {
+  font-family: 'Prosto One', serif;
+  font-size: 20px;
+}
+
+.award .issuer {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.award .issuer, .award .issuer a, .award .date {
+  font-size: 16px;
+}
+
+.award .date {
+  margin-top: 0px;
 }
 
 /* PROJECTS */
@@ -341,14 +374,22 @@ footer p:first-of-type {
     height: 50px;
   }
   
-  /* RECOMMENDATIONS */
-  .recommendation .fa-solid {
+  /* RECOMMENDATIONS AND AWARDS */
+  .recommendation .fa-solid, .award .fa-solid {
     min-width: 50px;
     max-width: 50px;
     min-height: 50px;
     max-height: 50px;
     line-height: 50px;
     font-size: 150%;
+  }
+
+  .award .title a {
+    font-size: 16px;
+  }
+
+  .award .issuer, .award .issuer a, .award .date {
+    font-size: 12px;
   }
 
   /* FOOTER */
