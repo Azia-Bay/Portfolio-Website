@@ -100,7 +100,7 @@ p {
   margin: 25px;
 }
 
-.about-section, .companies-section, .recommendations-section, footer {
+.about-section, .companies-section, .recommendations-section, .projects-section, footer {
   display: flex;
   flex-direction: column;
   margin-top: 50vh;
@@ -257,6 +257,17 @@ main, body {
 }
 
 .recommendation p:last-of-type {
+  font-style: italic;
+}
+
+/* PROJECTS */
+.projects-section .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-section p {
+  text-align: center;
   font-style: italic;
 }
 
