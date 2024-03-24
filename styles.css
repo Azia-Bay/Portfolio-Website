@@ -100,7 +100,7 @@ p {
   margin: 25px;
 }
 
-.about-section, .companies-section, footer {
+.about-section, .companies-section, .recommendations-section, footer {
   display: flex;
   flex-direction: column;
   margin-top: 50vh;
@@ -204,6 +204,10 @@ main, body {
 }
 
 /* COMPANIES */
+.companies-section .highlight-on-hover:hover {
+  outline: solid deepskyblue 5px;
+}
+
 .companies-section .content {
   display: flex;
   flex-direction: row;
@@ -222,7 +226,7 @@ main, body {
 
 .icon-background {
   display: flex;
-  background-color: white;
+  background-color: ghostwhite;
   border-radius: 10px;
   margin: 25px;
 }
@@ -231,6 +235,29 @@ main, body {
   margin: 15px;
   width: auto;
   height: 75px;
+}
+
+/* RECOMMENDATIONS */
+.recommendation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.recommendation .fa-solid {
+  color: gold;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 200%;
+}
+
+.recommendation p:last-of-type {
+  font-style: italic;
 }
 
 /* FOOTER */
@@ -301,6 +328,16 @@ footer p:first-of-type {
   /* COMPANIES */
   .companies-section img {
     height: 50px;
+  }
+  
+  /* RECOMMENDATIONS */
+  .recommendation .fa-solid {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    line-height: 50px;
+    font-size: 150%;
   }
 
   /* FOOTER */
