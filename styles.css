@@ -130,7 +130,7 @@ nav img {
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 25px;
+  margin-left: 30px;
   height: 50px;
   aspect-ratio: 1;
 }
@@ -247,10 +247,6 @@ main, body {
 }
 
 /* COMPANIES */
-.companies-section .highlight-on-hover:hover {
-  outline: solid deepskyblue 5px;
-}
-
 .companies-section .content {
   display: flex;
   flex-direction: row;
